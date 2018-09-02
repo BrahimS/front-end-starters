@@ -1,3 +1,4 @@
+import '../css/index.sass';
 console.log("hello worlddddd");
 
 (function(){
