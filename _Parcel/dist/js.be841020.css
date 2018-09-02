@@ -1,0 +1,35 @@
+._button_1ijrv_1 {
+  display: table;
+  border: 1px solid white;
+  width: 10%;
+  height: 5%;
+  float: left;
+  margin: 3%; }
+  ._button_red_1ijrv_8 {
+    background: red; }
+    ._button_red__rounded_1ijrv_10 {
+      border-radius: 6px; }
+  ._button_green_1ijrv_12 {
+    background: green; }
+    ._button_green__rounded_1ijrv_14 {
+      border-radius: 6px; }
+  ._button_normal_1ijrv_16 {
+    background: transparent; }
+    ._button_normal__rounded_1ijrv_18 {
+      border-radius: 6px; }
+
+footer {
+  display: block;
+  width: 100%;
+  background: #000;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 15px;
+  margin: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translate(-20px, 40px);
+          transform: translate(-20px, 40px); }

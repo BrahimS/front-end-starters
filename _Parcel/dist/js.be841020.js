@@ -103,7 +103,25 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"../../../../../../../Users/bs/.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"js/person.ts":[function(require,module,exports) {
+"use strict";
+
+exports.__esModule = true;
+var Person = /** @class */function () {
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype.sayName = function () {
+        console.log("Hello, my name is " + this.name);
+    };
+    Person.prototype.sayAge = function () {
+        console.log("I'am " + this.age + " year's old");
+    };
+    return Person;
+}();
+exports["default"] = Person;
+},{}],"../../../../../../../Users/bs/.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -169,25 +187,40 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../../../Users/bs/.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/index.js":[function(require,module,exports) {
-'use strict';
+module.exports = {
+        "button": "_button_1ijrv_1",
+        "button_red": "_button_red_1ijrv_8",
+        "button_red__rounded": "_button_red__rounded_1ijrv_10",
+        "button_green": "_button_green_1ijrv_12",
+        "button_green__rounded": "_button_green__rounded_1ijrv_14",
+        "button_normal": "_button_normal_1ijrv_16",
+        "button_normal__rounded": "_button_normal__rounded_1ijrv_18"
+};
+},{"_css_loader":"../../../../../../../Users/bs/.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/index.ts":[function(require,module,exports) {
+"use strict";
 
-require('../css/index.sass');
-
+var __importDefault = this && this.__importDefault || function (mod) {
+    return mod && mod.__esModule ? mod : { "default": mod };
+};
+exports.__esModule = true;
+var person_1 = __importDefault(require("./person"));
+require("../css/index.sass");
 console.log("hello worlddddd");
-
 (function () {
-  var _select = function _select(element) {
-    return document.querySelector(element);
-  };
-  setInterval(function () {
-    _select('body').style.background = 'pink';
-  }, 5000);
-  setTimeout(function () {
-    location.reload();
-  }, 10000);
+    var _select = function _select(element) {
+        return document.querySelector(element);
+    };
+    setInterval(function () {
+        _select('body').style.background = 'pink';
+    }, 5000);
+    setInterval(function () {
+        _select('body').style.background = 'purple';
+    }, 5000);
+    var person = new person_1["default"]("Brahim", 41);
+    person.sayName();
+    person.sayAge();
 })();
-},{"../css/index.sass":"css/index.sass"}],"../../../../../../../Users/bs/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./person":"js/person.ts","../css/index.sass":"css/index.sass"}],"../../../../../../../Users/bs/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -216,7 +249,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '59253' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '62229' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -357,5 +390,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../../../../../Users/bs/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
-//# sourceMappingURL=/js.e46e7f1e.map
+},{}]},{},["../../../../../../../Users/bs/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.ts"], null)
+//# sourceMappingURL=/js.be841020.map
