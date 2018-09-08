@@ -1,0 +1,10 @@
+{
+  "name": "webpack-starter",
+  "version": "1.0.0",
+  "description": "This a front end starter kit build on top of webpack",
+  "main": "y",
+  "repository": "https://github.com/BrahimS/front-end-starters",
+  "author": "Brahim Sourny",
+  "license": "MIT",
+  "private": false
+}
